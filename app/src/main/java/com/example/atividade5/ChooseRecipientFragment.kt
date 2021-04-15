@@ -1,18 +1,23 @@
 package com.example.atividade5
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class ChooseRecipientFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class ChooseRecipientFragment : Fragment(), View.OnClickListener{
+
+    var navController: NavController? = null
     private var param1: String? = null
     private var param2: String? = null
 
@@ -34,7 +39,6 @@ class ChooseRecipientFragment : Fragment() {
 
     companion object {
 
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             ChooseRecipientFragment().apply {
@@ -43,5 +47,23 @@ class ChooseRecipientFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
+        view.findViewById<Button>(R.id.next_btn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.cancel_btn).setOnClickListener(this)
+
+    }
+
+    override fun onClick(v: View?) {
+        when (v!!.id) {
+            R.id.next_btn -> {
+                navController!!.navigate(R.id.action_chooseRecipientFragment_to_specifyAmountFragment)
+            }
+            R.id.cancel_btn -> activity?.onBackPressed()
+
+        }
     }
 }
