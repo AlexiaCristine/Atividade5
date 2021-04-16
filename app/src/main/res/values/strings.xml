@@ -2,4 +2,15 @@
     <string name="app_name">atividade5</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nome">name</string>
+    <string name="proximo">next</string>
+    <string name="cancela">cancel</string>
+    <string name="transacao">View transactions</string>
+    <string name="mandarDinheiro">Send Money</string>
+    <string name="verBalanco">View Balance</string>
+    <string name="comida">food</string>
+    <string name="historico">data</string>
+    <string name="renda">rent</string>
+    <string name="velas">candles</string>
+    <string name="utilidades">utility</string>
 </resources>

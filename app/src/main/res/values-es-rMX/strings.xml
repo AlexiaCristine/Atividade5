@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">atividade5</string>
+    <string name="nome">nome</string>
+    <string name="hello_blank_fragment">¡Hola aplicación bancaria!</string>
+    <string name="proximo">Siguiente</string>
+    <string name="cancela">cancelar</string>
+</resources>
