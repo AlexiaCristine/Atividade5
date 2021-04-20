@@ -21,7 +21,7 @@ class RegisterActivity : AppCompatActivity() {
             }else{
 
                 Toast.makeText(this, "Input required", Toast.LENGTH_LONG).show()
-                
+
             }
 
         }
