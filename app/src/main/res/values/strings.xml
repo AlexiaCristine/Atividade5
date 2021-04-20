@@ -13,4 +13,9 @@
     <string name="renda">rent</string>
     <string name="velas">candles</string>
     <string name="utilidades">utility</string>
+    <string name="login">login</string>
+    <string name="Password">Password</string>
+    <string name="Login">Login</string>
+    <string name="username">username</string>
+    <string name="register">"Don't have an account? Register "</string>
 </resources>

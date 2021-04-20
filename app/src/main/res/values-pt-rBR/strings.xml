@@ -5,4 +5,12 @@
     <string name="hello_blank_fragment">Olá aplicativo de banco !</string>
     <string name="proximo">proximo</string>
     <string name="cancela">cancelar</string>
+    <string name="transacao">Ver transação</string>
+    <string name="mandarDinheiro">enviar dinheiro</string>
+    <string name="verBalanco">ver balanço</string>
+    <string name="comida">comida</string>
+    <string name="historico">historico</string>
+    <string name="renda">renda</string>
+    <string name="velas">velas</string>
+    <string name="utilidades">"utilidades "</string>
 </resources>

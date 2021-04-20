@@ -5,4 +5,12 @@
     <string name="hello_blank_fragment">¡Hola aplicación bancaria!</string>
     <string name="proximo">Siguiente</string>
     <string name="cancela">cancelar</string>
+    <string name="transacao">ver transacción</string>
+    <string name="mandarDinheiro">"enviar dinero "</string>
+    <string name="verBalanco">"ver hoja de balance "</string>
+    <string name="comida">comida</string>
+    <string name="historico">"histórico "</string>
+    <string name="renda">ingreso</string>
+    <string name="velas">velas</string>
+    <string name="utilidades">"utilidades "</string>
 </resources>
