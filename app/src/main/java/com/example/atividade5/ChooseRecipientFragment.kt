@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_choose_recipient.view.*
 
 
 private const val ARG_PARAM1 = "param1"
@@ -31,8 +32,8 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.next_btn).setOnClickListener(this)
-        view.findViewById<Button>(R.id.cancel_btn).setOnClickListener(this)
+        view.next_btn.setOnClickListener(this)
+        view.cancel_btn.setOnClickListener(this)
 
     }
 

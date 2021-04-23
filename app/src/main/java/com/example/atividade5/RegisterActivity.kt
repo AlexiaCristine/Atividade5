@@ -11,29 +11,20 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        btnRegister.setOnClickListener{
+        btnRegister.setOnClickListener {
 
-            if(editEmail.text.trim().isNotEmpty() || editPassword.text.trim().isNotEmpty() || editCPassword.text.trim().isNotEmpty() ){
-
-                Toast.makeText(this, "Input provided", Toast.LENGTH_LONG).show()
-
-
-            }else{
-
-                Toast.makeText(this, "Input required", Toast.LENGTH_LONG).show()
-
+            if (editUsername.text.trim().isNotEmpty() || editPassword.text.trim()
+                    .isNotEmpty() || editCPassword.text.trim().isNotEmpty()
+            ) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "registro invalida", Toast.LENGTH_LONG).show()
             }
-
         }
 
-
-
-        tvLogin.setOnClickListener{
-
-            val intent = Intent( this, MainActivity::class.java )
-            startActivity(intent)
-
+        tvLogin.setOnClickListener {
+            finish()
         }
-
     }
 }
