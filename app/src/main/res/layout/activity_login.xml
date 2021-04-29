@@ -31,7 +31,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/edUsername"
+            android:id="@+id/editUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username" />
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/edPassword"
+            android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/Password"

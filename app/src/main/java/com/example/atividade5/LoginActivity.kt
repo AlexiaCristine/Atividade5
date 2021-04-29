@@ -11,16 +11,40 @@ import androidx.annotation.ColorInt
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.replace
+import androidx.room.Room
+import com.example.atividade5.database.AppDatabase
+import com.example.atividade5.database.daos.UsersDAO
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var dao: UsersDAO
+
+     fun createDB(){
+        //create DB instance
+        val db = Room.databaseBuilder(
+            this,
+            AppDatabase::class.java,
+            "user-db"
+        )
+            .allowMainThreadQueries()
+            .build()
+
+        //get DAO
+        dao = db.usersDao()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        createDB()
         btnLogin.setOnClickListener{
 
-            if (edUsername.text.trim().isNotEmpty() || edPassword.text.trim().isNotEmpty()){
+            val password = editPassword.text.trim().toString()
+            val username = editUsername.text.trim().toString()
+            val user = dao.getByUserAndPassword(username, password)
+
+            if (user != null) {
+
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
 
