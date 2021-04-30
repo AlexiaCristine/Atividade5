@@ -31,7 +31,7 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_recipient"
+                android:id="@+id/input_amout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/number"

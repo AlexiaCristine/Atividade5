@@ -22,6 +22,7 @@ class RegisterActivity : AppCompatActivity() {
             "user-db"
         )
             .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
             .build()
 
         //get DAO
@@ -46,7 +47,6 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "registro invalida", Toast.LENGTH_LONG).show()
             }
         }
-
         tvLogin.setOnClickListener {
             finish()
         }

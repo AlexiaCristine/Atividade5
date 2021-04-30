@@ -27,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
             "user-db"
         )
             .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
             .build()
 
         //get DAO
@@ -53,16 +54,12 @@ class LoginActivity : AppCompatActivity() {
             }
             else{
                 Toast.makeText(this, "informação invalida", Toast.LENGTH_LONG).show();
-
             }
-
         }
             tvRegister.setOnClickListener{
                 val intent = Intent( this, RegisterActivity::class.java)
                 startActivity(intent)
-
             }
-
     }
     private fun useFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().apply {

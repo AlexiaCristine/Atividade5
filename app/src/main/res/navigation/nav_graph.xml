@@ -52,12 +52,11 @@
         android:id="@+id/confirmationFragment"
         android:name="com.example.atividade5.ConfirmationFragment"
         android:label="fragment_confirmation"
-        tools:layout="@layout/fragment_confirmation" />
-
-    <argument android:name="amount"
-        app:argType="com.package com.example.atividade5.Money"/>
-
-
+        tools:layout="@layout/fragment_confirmation" >
+        <argument
+            android:name="amount"
+            app:argType="float" />
+    </fragment>
     <fragment
         android:id="@+id/specifyAmountFragment"
         android:name="com.example.atividade5.SpecifyAmountFragment"
